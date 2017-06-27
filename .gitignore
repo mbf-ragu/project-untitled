@@ -16,7 +16,7 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
-index.php
+/index.php
 wp-activate.php
 wp-content/uploads
 wp-admin/

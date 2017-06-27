@@ -1,0 +1,25 @@
+.variable_color_picker{
+    background: #dddddd;
+    width: 40px !important;
+    height: 25px;
+    border-radius: 0;
+    padding: 0 3px;
+}
+.mce-i-shortcodes
+{
+
+background-image:url("shortcodes.png") !important;
+}
+.mce-i-linebreak
+{
+
+background-image:url("linebreak.png") !important;
+}
+
+.wp-core-ui #wp-social-login-connect-option { display: none;}
+
+
+.pagination  li{ float:left; font-weight:500}
+.pagination  li a{ display:block; padding:5px 5px;}
+.pagination li a:hover, .pagination ul li a.active{ b color:#444;}
+.variable_pricing .form-row-last{display: none;}
