@@ -6,7 +6,7 @@ include('posttypes/banner.php');
 include('posttypes/press.php');
 include('posttypes/newsletter.php');
 include('posttypes/retailers.php');
-include('posttypes/work_with_us.php');
+include('posttypes/tasks.php');
 /********
 Listing
 ********/

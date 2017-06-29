@@ -9,6 +9,7 @@ body{
 }
 .login{
     background-color: #fff;
+
 }
 .label{
     font-weight: bold;
@@ -58,7 +59,12 @@ img.avatar {
 
 span.psw {
     float: right;
-    padding-top: 16px;
+}
+#remember{
+    -webkit-appearance: checkbox;
+}
+body {
+    background-color: #fff;
 }
 
 /* Change styles for span and cancel button on extra small screens */
