@@ -1,0 +1,79 @@
+<% include ../partials/head %>
+<body>
+	<% include ../partials/header %>
+	<!-- my-account page starts here.... -->
+	<div class="wrapper subpage">   
+		<div class="inner-side-bg"></div>
+		<div class="shadow-hook">
+			<div class="bottom-shodow-hook"></div>
+    		<div class="center-shodow-hook">
+            	<ul class="breadcrumb">
+            		<!-- Breadcrumb NavXT 5.7.1 -->
+					<li><a title="Go to SS Pandian." href="http://13.59.186.159" class="home">Home</a></li>
+					<li>Contact</li>
+				</ul>
+	            <div class="container">
+	                <div class="white-container">
+	                  	<div class="row clearfix">
+		                    <div class="col-width col-xs-8">
+		                        <div class="introtext contact-intro title-head">
+		                            <h1 class="inner-heading">Contact</h1>
+		                        </div>
+		                        <form name="contact_us" id="contactUs" method="post" onsubmit= "return form_validation();" action="/index.php">
+		                            <input type="hidden" id="contact_us" name="contact_us" value="97bd6802fb" /><input type="hidden" name="_wp_http_referer" value="/contact/" />                            <input type="hidden" name="action" value="contact_ajax_form">
+		                            <div class="form-wrap">
+		                                <div class="form-row">
+		                                    <label class="floating-item" data-error="Please enter your name">
+		                                        <input type="text" name="contactname" id="contactname"   class="floating-item-input input-item required_field validate validatename" value="" data-error="" maxlength="75" />
+		                                        <span class="floating-item-label">NAME</span>
+		                                    </label>
+		                                </div>
+		                                <div class="form-row">
+		                                    <label class="floating-item" data-error="Please enter your email address">
+		                                        <input type="text" name="contactemail" id="contactemail" class="floating-item-input input-item required_field validate validatemail" value="" data-error="" maxlength="100" />
+		                                        <span class="floating-item-label">EMAIL ADDRESS</span>
+		                                    </label>
+		                                </div>
+		                                <div class="form-row">
+		                                    <label class="floating-item" data-error="Please enter your mobile number">
+		                                        <input type="text" name="contacttelephone" id="contacttelephone" class="floating-item-input input-item required_field validate validatetelephone" value="" data-error="" maxlength="12"/>
+		                                        <span class="floating-item-label">MOBILE NUMBER</span>
+		                                    </label>
+		                                </div>
+		                                <div class="form-row">
+		                                    <label class="floating-item" data-error="Please enter your message">
+		                                        <textarea name="contactmessage" id="contactmessage" maxlength="2000" rows="5" class="floating-item-input input-item required_field validate validatemessage" data-error="" ></textarea>
+		                                        <span class="floating-item-label">MESSAGE</span>
+		                                    </label>
+		                                </div>
+		                                <div class="form-row tick-btn"> 
+		                                    <button name="contact_submit" id="contact_submit" class="button next-button has-ripple" data-style="shrink" value="submit">Send</button>
+		                                    <div class="tick-box"></div> 
+		                                </div> 
+		                            </div> 
+		                        </form>
+		                    </div>
+		                    <div class="col-width col-xs-4 addressText">
+		                        <h2>ADDRESS</h2>
+		                        <p>
+		                        	S S Pandian &amp; Sons<br />
+			                        #148, 3rd Main Road,<br />
+			                        Industrial Town,<br />
+			                        Rajajinagar,<br />
+			                        Bengaluru &#8211; 560 010<br />
+			                        India.
+			                    </p>
+								<p><strong>Tel:</strong> 2330 0127 / 2330 6305<br />
+								<strong>Fax:</strong> 2338 3038<br />
+								<strong>Mobile:</strong> +91 99004 55100<br />
+								<strong>Email:</strong> info@sspandian.com</p>
+		                    </div>
+	                	</div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+	<% include ../partials/footer %>
+</body>
+</html>

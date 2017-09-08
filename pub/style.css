@@ -1,0 +1,584 @@
+﻿#dummy_login,#order_review .woocommerce-checkout-review-order-table,#order_review_heading,.address_form,.onsale,.prcInfoPd,.woocommerce-checkout #search-icon,.woocommerce-checkout .woocommerce-info,.woocommerce-checkout abbr.required,.woocommerce-checkout nav,label.floating-item:before {
+  display: none;
+}
+
+.floating-item-input {
+  text-transform: none;
+}
+
+.prcInfoPd.active {
+  display: block;
+}
+
+.btn.progress-button .progress-inner {
+  background-color: #148544;
+}
+
+.product-desc .button {
+  padding: 0;
+}
+
+.error-message {
+  display: none;
+  color: red;
+}
+
+.newlettersub .error-message {
+  padding-left: 15px;
+}
+
+.bag-cart-empty {
+  display: none;
+}
+
+.cart-table.structure {
+  width: 100%;
+  border: 0;
+}
+
+.calculation-sections {
+  margin-bottom: 10px;
+  text-align: right;
+  width: 380px;
+}
+
+.cart-table td strong {
+  font-size: 16px;
+}
+
+.cart-table td:first-child {
+  width: auto;
+}
+
+#discountTr {
+  border-top: 2px solid #efece7;
+  border-bottom: 2px solid #efece7;
+}
+
+.discountVoc {
+  padding-top: 30px;
+}
+
+#carttd .addvoucher {
+  display: block;
+}
+
+.logo img {
+  width: 148px;
+}
+
+.no_link {
+  cursor: default;
+}
+
+.global-error:before,.global-success:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.global-error:before {
+  background-color: #c03;
+}
+
+.global-error,.global-success {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.no-history {
+  padding-top: 15px;
+}
+
+.order-list span.woocommerce-Price-amount,.order-list span.woocommerce-Price-currencySymbol {
+  color: #000;
+}
+
+.order-list span,.order-list strong {
+  display: flex;
+}
+
+.recipe-content .post-ratings img,.tile-items .slick-slide .tile-content .post-ratings img {
+  font: normal normal normal 14px/1 FontAwesome;
+  margin-right: 3px;
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  width: 13px;
+  height: 14px;
+}
+
+.order-reference p,.reference-details .product-total,.woocommerce-order-received .total-blk td:first-child {
+  font-family: AvenirLT-Black,sans-serif;
+}
+
+.checkout-footer,.error_message,.woocommerce-checkout .breadcrumb,.woocommerce-checkout .cart-search,.woocommerce-checkout .introtext {
+  display: none;
+}
+
+.error_message {
+  color: red;
+  display: none;
+  font-size: 14px;
+  padding: 7px 0 0;
+}
+
+.woocommerce-checkout .checkout-footer {
+  display: block!important;
+}
+
+.breadcrumb {
+  z-index: 9999;
+}
+
+.subpage .white-container {
+  margin: 85px 0 200px;
+}
+
+.subpage {
+  padding: 152px 0 40px;
+}
+
+.page-template-ST-OurRecipes .subpage .white-container,.page-template-ST-Products .subpage .white-container {
+  margin: 220px 0 200px;
+}
+
+.searchLoader {
+  display: none;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  left: 50%;
+  top: 50%;
+}
+
+.quantity-blk li {
+  margin: 0;
+  cursor: pointer;
+  padding: 0 15px!important;
+}
+
+.quantity-blk li:before {
+  content: ''!important;
+}
+
+.search-wrap:before {
+  background: 0 0!important;
+}
+
+input[type=checkbox],input[type=radio] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.close-button {
+  cursor: pointer;
+  position: absolute;
+  font-size: 16px;
+  margin-top: -12px;
+  right: 17px;
+  top: 50%;
+}
+
+.woocommerce-message {
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  padding: 25px 40px;
+  position: relative;
+  z-index: 9;
+}
+
+.addressText {
+  padding: 8px 42px;
+  position: relative;
+}
+
+.addressText:before {
+  content: '';
+  background-color: #d6d4d5;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  top: 11px;
+  left: 0;
+}
+
+.error-row .floating-item:before {
+  background: 0;
+}
+
+.orders-table {
+  margin-bottom: 15px;
+}
+
+.woocommerce-cart .shadow-hook:after {
+  height: 511px;
+}
+
+.woocommerce-cart .white-container {
+  min-height: 520px;
+}
+
+.woocommerce-order-received .total-blk td:first-child {
+  text-transform: uppercase;
+  color: #332a26!important;
+  font-size: 14px;
+}
+
+.page-template-index-php footer .footer-links {
+  padding-bottom: 142px;
+}
+
+.about_paypal,.page-template-index-php footer .footer-links col-sm-4 p {
+  padding-left: 15px;
+}
+
+.about_paypal {
+  display: block;
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.page-template-ST-Register .shadow-hook .center-shodow-hook:after {
+  top: 366px;
+  bottom: 411px;
+}
+
+.page-template-ST-Register .subpage .shadow-hook .center-shodow-hook:before {
+  top: 348px;
+  bottom: 375px;
+}
+
+.alignleft {
+  float: left;
+  padding-right: 15px;
+}
+
+.alignright {
+  float: right;
+  padding-left: 15px;
+}
+
+.about-us .gallery-thumb .col-xs-3 {
+  float: left;
+}
+
+.select2-container {
+  display: none!important;
+}
+
+footer h6 {
+  line-height: 21px;
+}
+
+.woocommerce-checkout #navmobile {
+  display: none;
+}
+
+.page-template-ST-OurRecipes .pull-container {
+  margin-top: -450px;
+  position: relative;
+}
+
+.select-row .ui-selectmenu-menu,.select-row .ui-selectmenu-menu ul {
+  top: 41px!important;
+  width: 100%!important;
+}
+
+.reference-details .product-total,.reference-details th {
+  color: #332a26!important;
+}
+
+.order-reference .total-blk td:nth-child(odd),.product-quantity {
+  color: #332a26;
+  text-transform: uppercase;
+  font-family: AvenirLT-Black,sans-serif;
+}
+
+.order-reference p {
+  font-size: 18px;
+}
+
+.checkboxradio-label a,.empty-bag-container a,.payment_method_paypal a {
+  color: #e65840;
+}
+
+.checkboxradio-label a:hover,.empty-bag-container a:hover,.payment_method_paypal a:hover {
+  color: #332927;
+}
+
+.current,.footer-links a.active {
+  color: #e65840;
+}
+
+.current {
+  border: 1px solid #e1e1e1;
+}
+
+/*
+.ui-selectmenu-menu .ui-menu-item {
+  text-transform: uppercase;
+}
+*/
+.ui-selectmenu-text{
+  text-transform: none;
+}
+.payment_method_sarkmigs img { 
+  padding-left: 40px;
+}
+.footer h1{
+    text-align: center;
+}
+.page-template-ST-Register .subpage .shadow-hook .center-shodow-hook:before{
+    bottom: 410px;
+}
+.page-template-ST-Register .subpage .shadow-hook:before{
+    height: 451px;
+}
+
+.ui-selectmenu-menu{
+        transition-duration: .0s !important;
+}
+.social-media a {
+  font-size: 20px;
+  color: gray;
+}
+.woocommerce-checkout-payment{
+  margin-bottom: -25px;
+}
+@media screen and (max-width:1024px) {
+  .footer-links{
+    padding-left: 130px;
+  }
+}
+
+
+@media screen and (max-width:768px) {
+  .social-media.fR {
+    display: block;
+    text-align: center;
+    float: none;
+    width: 100%;
+  }
+  .social-media.fR ul{display: inline-block;}
+  .social-media.fR ul li{
+    display: inline-block;
+  }
+
+  .page-template-ST-Register .shadow-hook .center-shodow-hook:after {
+    bottom: 235px;
+  }
+
+  .page-template-ST-Register .subpage .shadow-hook .center-shodow-hook:before {
+    bottom: 410px;
+  }
+
+  .page-template-ST-Register .subpage .shadow-hook:before {
+    height: 275px;
+    }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .addressText {
+    padding: 10px;
+  }
+
+  .calculation-sections {
+    width: 100%;
+  }
+
+  .checkout .button {
+    min-width: 100%;
+  }
+
+  .cart-table .cart-title {
+    padding-left: 0;
+  }
+
+  .woocommerce-cart .preloadtd button,.woocommerce-cart .preloadtd input {
+    width: 30px;
+    height: 30px;
+  }
+
+  .shopcontinue {
+    top: 90px;
+    left: 33%;
+    z-index: 999;
+  }
+  .footer-links{
+    padding-left: 0px;
+    padding-bottom: 100px;
+  }
+  .footer-links .col-sm-3{
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .order-reference,.woocommerce-order-received .order_item td {
+    text-transform: uppercase;
+    font-family: AvenirLT-Black,sans-serif;
+  }
+
+  .woocommerce-order-received .order_item td {
+    color: #332a26;
+    font-size: 14px;
+  }
+
+  .emptybag {
+    width: inherit;
+  }
+
+  .shopcontinue {
+    left: 50%;
+    top: inherit;
+    bottom: inherit;
+    transform: translateX(-50%);
+  }
+
+  .addressText {
+    padding: 8px 5px;
+  }
+
+  .addressText:before {
+    display: none;
+  }
+
+  .cart-table {
+    width: 100%;
+  }
+
+  .cart-table .total-blk td,.cart-table td:first-child {
+    width: auto;
+    padding-top: 16px;
+  }
+
+  .cart-table td:first-child {
+    float: left;
+  }
+
+  .page-template-ST-Products .watermark {
+    top: 40px;
+  }
+
+  .page-template-ST-Products .subpage .white-container {
+    margin-top: 140px;
+  }
+
+  .order-reference .totaltable {
+    overflow: hidden;
+  }
+
+  .order-reference .totaltable td {
+    border-bottom: 0;
+  }
+
+  .woocommerce-cart .subpage .shadow-hook .bottom-shodow-hook {
+    bottom: -60px;
+  }
+
+  .woocommerce-cart .subpage .shadow-hook .bottom-shodow-hook:before {
+    bottom: 390px;
+  }
+
+  .woocommerce-cart .shadow-hook:after {
+    height: 511px;
+  }
+
+  .page-template-ST-OurRecipes .subpage .white-container {
+    margin: 32px 0 100px!important;
+  }
+
+  .orders-table tr td:first-child {
+    color: inherit;
+  }
+
+  .order-reference {
+    color: #332a26;
+  }
+
+  .order-reference p {
+    padding-top: 30px;
+  }
+
+  .product-name {
+    z-index: 1;
+  }
+  .footer-links .col-sm-3{
+    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .woocommerce-cart .product-name {
+    z-index: 1;
+  }
+
+  .addressText {
+    padding: 8px 13px;
+  }
+
+  .white-container {
+    padding: 0 25px;
+    min-height: inherit;
+  }
+
+  .cart-table .textbox-left,.cart-table .textbox-right,.cart-table .textbox-small {
+    width: 38px;
+    height: 38px;
+  }
+
+  .proTitle {
+    font-size: 24px;
+  }
+
+  .cart-table td:last-child {
+    padding-top: 16px;
+  }
+
+  .cart-table td:last-child.sub-total {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .quantity-price .preloadtd {
+    padding-left: 0;
+  }
+
+  .product-img {
+    margin-top: 0;
+  }
+
+  .woocommerce-cart .subpage .shadow-hook .center-shodow-hook:before {
+    bottom: 390px;
+  }
+
+  .single-recipes .pull-container {
+    margin-top: -240px!important;
+  }
+
+  .page-template-ST-OurRecipes .subpage .white-container {
+    margin: 20px 0 200px!important;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .product-desc .quantity-price p {
+    padding-top: 0;
+  }
+}
+    
