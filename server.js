@@ -1,34 +1,52 @@
-// load the things we need
-var express = require('express');
-var app = express();
+// set up ======================================================================
+	
+	// get all the tools we need
+	var express = require('express');
+	var app     = express();
+	var port    = process.env.PORT || 8080;
+	var mongoose= require('mongoose');
+	var passport= require('passport');
+	var flash   = require('connect-flash');
+	var logger 	= require('morgan');
+	var cookieParser = require('cookie-parser');
+	var bodyParser = require('body-parser');
+	var session = require('express-session');
+	var configDB = require('./config/database.js');
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
+// configuration ===============================================================
+	mongoose.connect(configDB.url); // connect to our database
 
-// use res.render to load up an ejs view file
-app.use(express.static(__dirname + '/pub'));
-// index page 
-app.get('/sspnode', function(req, res) {
-	res.render('pages/index');
-});
+	require('./config/passport')(passport); // pass passport for configuration
+	
+	// set up our express application
+	app.use(logger('dev'));
+	app.use(cookieParser());
+	app.use(bodyParser.urlencoded({ extended: true }));
+	app.use(bodyParser.json()); // get information from html forms
+	app.set('view engine', 'ejs'); // set up ejs for templating
+	
+	// use res.render to load up an ejs view file
+	app.use(express.static(__dirname + '/pub'));
 
-// about page 
-app.get('/sspnode/about', function(req, res) {
-	res.render('pages/about');
-});
+	// required for passport
+	app.use(session({
+	    secret: 'mysecretsessionkeytokeepsessionsecret',
+	    cookie: { maxAge: 2628000000 },
+	    resave: false,
+	    saveUninitialized: false,
+	    store: new(require('express-sessions'))({
+	        storage: 'mongodb',
+	        instance: mongoose, // optional 
+	        collection: 'sessions', // optional 
+	        expire: 86400 // optional 
+	    })
+	}));
+	app.use(passport.initialize());
+	app.use(passport.session()); // persistent login sessions
+	app.use(flash()); // use connect-flash for flash messages stored in session
 
-// contact page 
-app.get('/sspnode/contact', function(req, res) {
-	res.render('pages/contact');
-});
+// routes ======================================================================
+	require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
 
-var optionsget = {
-    host : '192.168.0.38',
-    port : 3010,
-    path : '/sspnode', // the rest of the url with parameters if needed
-    method : 'GET' // do GET
-};
-var server = app.listen(optionsget, function () {
-   var host = server.address().address
-   var port = server.address().port
-});
+// launch ======================================================================
+	app.listen(port);
