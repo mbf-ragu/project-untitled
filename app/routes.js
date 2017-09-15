@@ -1,10 +1,12 @@
 // app/routes.js
-module.exports = function(app, passport) {
+module.exports = function(app, passport,mongoose) {
 
 	// =====================================
 	// HOME PAGE (with login links) ========
 	// =====================================
-	app.get('/', function(req, res) {
+	app.get('/',isLoggedIn, function(req, res) {
+		if (req.isAuthenticated())
+			res.redirect('/dashboard');
 		res.render('index.ejs'); // load the index.ejs file
 	});
 
@@ -13,14 +15,15 @@ module.exports = function(app, passport) {
 	// =====================================
 	// show the login form
 	app.get('/login', function(req, res) {
-
+		if (req.isAuthenticated())
+			res.redirect('/dashboard');
 		// render the page and pass in any flash data if it exists
-		res.render('login.ejs', { message: req.flash('loginMessage') });
+		res.render('pages/login', { message: req.flash('loginMessage') });
 	});
 
 	// process the login form
 	app.post('/login', passport.authenticate('local-login', {
-		successRedirect : '/profile', // redirect to the secure profile section
+		successRedirect : '/dashboard', // redirect to the secure profile section
 		failureRedirect : '/login', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
@@ -48,8 +51,9 @@ module.exports = function(app, passport) {
 	// we will want this protected so you have to be logged in to visit
 	// we will use route middleware to verify this (the isLoggedIn function)
 	app.get('/profile', isLoggedIn, function(req, res) {
-		res.render('profile.ejs', {
-			user : req.user // get the user out of session and pass to template
+		res.render('pages/profile.ejs', {
+			user : req.user, // get the user out of session and pass to template
+			req : req // get the user out of session and pass to template
 		});
 	});
 
@@ -75,20 +79,41 @@ module.exports = function(app, passport) {
 	app.get('/contact', function(req, res) {
 		res.render('pages/contact');
 	});
-	// loginhtml page 
-	app.get('/logins', function(req, res) {
-		res.render('pages/login', { message: req.flash('loginMessage') });
+	// project_detailhtml page 
+	app.get('/project_detail',isLoggedIn, function(req, res) {
+		res.render('pages/project_detail', { message: req.flash('loginMessage'),req: req });
 	});
+	// project_detailhtml page 
+	app.get('/projects',isLoggedIn, function(req, res) {
+		projects = require('../app/models/projects.js'); // load our routes and pass in our app and fully configured passport
+		var projects = mongoose.model('projects', projects);
+		projects.find({},function(err, objs){
+			res.render('pages/projects', {
+				projects: objs,
+				req: req
+			});
+			for (var i = 0; i < objs.length; i++) {
+				console.log(objs[i]);
+			}
+	    });
+	});
+
 
 	// dashboard page 
-	app.get('/dashboard', function(req, res) {
-		console.log('dashboard');
-		res.render('pages/dashboard');
+	app.get('/dashboard', isLoggedIn, function(req, res) {
+		user = require('../app/models/user.js'); // load our routes and pass in our app and fully configured passport
+		var User = mongoose.model('User', user);
+		User.findOne({_id:'59b910ee0c85e1e0484f99aa'},'firstname',function(err, objs){
+			obj = objs.toJSON().firstname;
+			res.render('pages/dashboard', {
+				req: req
+			});
+	    });
 	});
 
-
-
 };
+
+
 
 // route middleware to make sure
 function isLoggedIn(req, res, next) {
@@ -98,5 +123,5 @@ function isLoggedIn(req, res, next) {
 		return next();
 
 	// if they aren't redirect them to the home page
-	res.redirect('/');
+	res.redirect('/login');
 }

@@ -102,6 +102,22 @@ body.nav-sm .profile {
   border: 1px solid rgba(52, 73, 94, 0.44);
   padding: 4px;
 }
+.profile-img {
+    width: 70%;
+    height: 50px;
+    background: #b3b3b3;
+    z-index: 1000;
+    position: inherit;
+    margin-left: 20%;
+    margin-top: 20px;
+    border: 1px solid rgba(52, 73, 94, 0.44);
+    padding: 4px;
+    padding-left: 7px;
+    border-radius: 50%;
+}
+.profile {
+    padding-bottom: 35%;
+}
 .profile_info {
   padding: 25px 10px 10px;
   width: 65%;
